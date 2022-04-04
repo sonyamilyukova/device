@@ -4,14 +4,14 @@ import { Filters, Catalog } from '../../blocks';
 import { Title } from '../../ui';
 import { Header, Wrapper } from './styles';
 import { useStore } from 'effector-react';
-import {$categories, loadProducts} from '../../../model/products';
+import {$categories, loadProducts, filterByCategory} from '../../../model/products';
 
 const CatalogPage: React.FC = () => {
   const categories = useStore($categories);
   const { category } = useParams();
 
   useEffect(() => {
-    loadProducts().then(() => {});
+    loadProducts().then(() => filterByCategory(category!));
   }, [category]);
 
   return (

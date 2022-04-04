@@ -13,11 +13,11 @@ export const changeFilters = createEvent<IDefaultFilters>();
 export const $filters = createStore(defaultFilters)
   .on(changeFilters, (_, payload) => payload);
 
-export const loadProducts = createEffect(async () => {
-  const response = await fetch("https://my-json-server.typicode.com/sonyamilyukova/device/products");
-  console.log(response);
-  if (response.ok) return response.json();
-  else return [];
+export const loadProducts = createEffect(() => {
+  fetch("https://my-json-server.typicode.com/sonyamilyukova/device/products", {
+    method: 'GET'
+  })
+    .then(response => response.ok ? response.json() : []);
 });
 
 export const filterByCategory = createEvent<string>();

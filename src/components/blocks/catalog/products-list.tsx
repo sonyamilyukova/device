@@ -8,7 +8,7 @@ import {
   filterProducts,
   resetProducts,
   sortProducts,
-  $sorting
+  $sorting, loadProducts
 } from '../../../model/products';
 import { ProductCard } from '../../ui';
 import { Products, ListItem, Text } from './styles';
@@ -18,6 +18,7 @@ const ProductsList: React.FC = () => {
   const sorting = useStore($sorting);
   const filters = useStore($filters);
   const { category } = useParams();
+
 
   // useEffect(() => {
   //   resetProducts();

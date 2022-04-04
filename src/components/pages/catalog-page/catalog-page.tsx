@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Filters, Catalog } from '../../blocks';
 import { Title } from '../../ui';
 import { Header, Wrapper } from './styles';
 import { useStore } from 'effector-react';
-import { $categories } from '../../../model/products';
+import {$categories, loadProducts} from '../../../model/products';
 
 const CatalogPage: React.FC = () => {
   const categories = useStore($categories);
   const { category } = useParams();
+
+  useEffect(() => {
+    loadProducts().then(() => {});
+  }, [category]);
 
   return (
     <main>

@@ -2,6 +2,7 @@ import { createStore, createEvent, createEffect } from 'effector';
 import { IDevice } from '../data/devices';
 import { filters, defaultFilters, IDefaultFilters } from '../data/filters';
 import { categories } from '../data/categories';
+import db from "../db.json";
 
 export const $categories = createStore(categories);
 
@@ -13,9 +14,14 @@ export const changeFilters = createEvent<IDefaultFilters>();
 export const $filters = createStore(defaultFilters)
   .on(changeFilters, (_, payload) => payload);
 
+
 export const loadProducts = createEffect(() =>
-  fetch("https://my-json-server.typicode.com/sonyamilyukova/device/products")
-    .then(response => response.ok ? response.json() : [])
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify(db.products),
+    headers: {'Content-type': 'application/json; charset=UTF-8'}
+  }).then(response => response.ok ? response.json() : [])
+    .then(data => Object.values(data).slice(0, -1))
 );
 
 export const filterByCategory = createEvent<string>();
@@ -23,7 +29,7 @@ export const filterProducts = createEvent<IDefaultFilters>();
 export const sortProducts = createEvent<string>();
 export const resetProducts = createEvent();
 
-export const $products = createStore<IDevice[]>([])
+export const $products = createStore<any[]>([])
   .on(loadProducts.doneData, (_, payload) => payload)
   .on(filterByCategory, (products, category) =>
     products.filter((product) => product.category === category)

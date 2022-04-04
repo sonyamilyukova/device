@@ -1,0 +1,585 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Соня",
+      "password": "qwerty",
+      "email": "smshakirova@mail.ru",
+      "phone": "+79827578103",
+      "productIds": [1, 2]
+    }
+  ],
+  "slides": [
+    {
+      "id": 1,
+      "category": "quadcopter",
+      "image": "/images/slider/quadcopter.png",
+      "title": "Квадрокоптер с лазером",
+      "moto": "Порхает как бабочка, жалит как пчела!",
+      "description": "Этот обычный, на первый взгляд, квадрокоптер оснащён мощным лазером, замаскированным под стандартную камеру.",
+      "price": 10000,
+      "qualities": [
+        {
+          "quality": "Дальность полета",
+          "value": "800 м"
+        },
+        {
+          "quality": "Радиус поражения",
+          "value": "50 м"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 10,
+      "category": "vr",
+      "image": "/images/products/vr/product-10.jpg",
+      "title": "Очки виртуальной реальности",
+      "price": 1000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 11,
+      "category": "vr",
+      "image": "/images/catalog/vr/product-11.jpg",
+      "title": "Очки виртуальной реальности",
+      "price": 1200,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black", "white", "blue"]
+    },
+    {
+      "id": 12,
+      "category": "vr",
+      "image": "/images/catalog/vr/product-12.jpg",
+      "title": "Очки виртуальной реальности",
+      "price": 2000,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black"]
+    },
+    {
+      "id": 13,
+      "category": "vr",
+      "image": "/images/catalog/vr/product-13.jpg",
+      "title": "Очки виртуальной реальности",
+      "price": 1500,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "white", "blue"]
+    },
+    {
+      "id": 14,
+      "category": "vr",
+      "image": "/images/catalog/vr/product-14.jpg",
+      "title": "Очки виртуальной реальности",
+      "price": 500,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black", "white"]
+    },
+    {
+      "id": 15,
+      "category": "vr",
+      "image": "/images/catalog/vr/product-15.jpg",
+      "title": "Очки виртуальной реальности",
+      "price": 5000,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 4,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-4.jpg",
+      "title": "Селфи-палка «Следуй за мной»",
+      "price": 4900,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black", "white"]
+    },
+    {
+      "id": 5,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-5.jpg",
+      "title": "Любительская селфи-палка",
+      "price": 500,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black"]
+    },
+    {
+      "id": 6,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-6.jpg",
+      "title": "Профессиональная селфи-палка",
+      "price": 1500,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black"]
+    },
+    {
+      "id": 7,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-7.jpg",
+      "title": "Непотопляемая селфи-палка",
+      "price": 2500,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black"]
+    },
+    {
+      "id": 22,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-22.jpg",
+      "title": "Селфи-палка «Трёхногий монстр»",
+      "price": 9000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 23,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-23.jpg",
+      "title": "Подвижная селфи-палка",
+      "price": 2000,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black", "blue"]
+    },
+    {
+      "id": 24,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-24.jpg",
+      "title": "Простая селфи-палка",
+      "price": 300,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "blue", "red", "pink"]
+    },
+    {
+      "id": 25,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-25.jpg",
+      "title": "Селфи-палка для девочек",
+      "price": 1560,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["pink"]
+    },
+    {
+      "id": 26,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-26.jpg",
+      "title": "Селфи-палка",
+      "price": 1999,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 27,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-27.jpg",
+      "title": "Селфи-палка",
+      "price": 4000,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black", "blue"]
+    },
+    {
+      "id": 28,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-28.jpg",
+      "title": "Селфи-палка",
+      "price": 4000,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black", "blue"]
+    },
+    {
+      "id": 29,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-29.jpg",
+      "title": "Селфи-палка",
+      "price": 3000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 30,
+      "category": "monopod",
+      "image": "/images/catalog/monopod/product-30.jpg",
+      "title": "Селфи-палка",
+      "price": 7000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 16,
+      "category": "camera",
+      "image": "/images/catalog/camera/product-16.jpg",
+      "title": "Экшн-камера",
+      "price": 1000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "white"]
+    },
+    {
+      "id": 17,
+      "category": "camera",
+      "image": "/images/catalog/camera/product-17.jpg",
+      "title": "Экшн-камера",
+      "price": 1000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 18,
+      "category": "camera",
+      "image": "/images/catalog/camera/product-18.jpg",
+      "title": "Экшн-камера",
+      "price": 3000,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black"]
+    },
+    {
+      "id": 19,
+      "category": "camera",
+      "image": "/images/catalog/camera/product-19.jpg",
+      "title": "Экшн-камера",
+      "price": 7000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 20,
+      "category": "camera",
+      "image": "/images/catalog/camera/product-20.jpg",
+      "title": "Экшн-камера",
+      "price": 300,
+      "isNew": true,
+      "bluetooth": false,
+      "colors": ["black"]
+    },
+    {
+      "id": 21,
+      "category": "camera",
+      "image": "/images/catalog/camera/product-21.jpg",
+      "title": "Экшн-камера",
+      "price": 2900,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "white"]
+    },
+    {
+      "id": 40,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-40.jpg",
+      "title": "Фитнес-браслет",
+      "price": 900,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "blue"]
+    },
+    {
+      "id": 41,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-41.jpg",
+      "title": "Фитнес-браслет",
+      "price": 900,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 42,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-42.jpg",
+      "title": "Фитнес-браслет",
+      "price": 900,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black"]
+    },
+    {
+      "id": 43,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-43.jpg",
+      "title": "Фитнес-браслет",
+      "price": 900,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "blue"]
+    },
+    {
+      "id": 44,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-44.jpg",
+      "title": "Фитнес-браслет",
+      "price": 970,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 45,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-45.jpg",
+      "title": "Фитнес-браслет",
+      "price": 3000,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["pink"]
+    },
+    {
+      "id": 46,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-46.jpg",
+      "title": "Фитнес-браслет",
+      "price": 9000,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black", "pink"]
+    },
+    {
+      "id": 47,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-47.jpg",
+      "title": "Фитнес-браслет",
+      "price": 599,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "red", "blue"]
+    },
+    {
+      "id": 48,
+      "category": "bracelet",
+      "image": "/images/catalog/bracelet/product-48.jpg",
+      "title": "Фитнес-браслет",
+      "price": 4900,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 50,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-50.jpg",
+      "title": "Умные часы",
+      "price": 400,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 51,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-51.jpg",
+      "title": "Умные часы",
+      "price": 4000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 52,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-52.jpg",
+      "title": "Умные часы",
+      "price": 300,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 53,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-53.jpg",
+      "title": "Умные часы",
+      "price": 400,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "white"]
+    },
+    {
+      "id": 54,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-54.jpg",
+      "title": "Умные часы",
+      "price": 500,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "blue"]
+    },
+    {
+      "id": 55,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-55.jpg",
+      "title": "Умные часы",
+      "price": 600,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["blue"]
+    },
+    {
+      "id": 56,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-56.jpg",
+      "title": "Умные часы",
+      "price": 700,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 57,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-57.jpg",
+      "title": "Умные часы",
+      "price": 400,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 58,
+      "category": "watch",
+      "image": "/images/catalog/watch/product-58.jpg",
+      "title": "Умные часы",
+      "price": 550,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "white"]
+    },
+    {
+      "id": 60,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-60.jpg",
+      "title": "Квадрокоптер",
+      "price": 5500,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 61,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-61.jpg",
+      "title": "Квадрокоптер",
+      "price": 6000,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black", "white", "red"]
+    },
+    {
+      "id": 62,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-62.jpg",
+      "title": "Квадрокоптер",
+      "price": 5500,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["red", "blue","white"]
+    },
+    {
+      "id": 63,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-63.jpg",
+      "title": "Квадрокоптер",
+      "price": 3000,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 64,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-64.jpg",
+      "title": "Квадрокоптер",
+      "price": 5500,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 65,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-65.jpg",
+      "title": "Квадрокоптер",
+      "price": 6000,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black", "blue"]
+    },
+    {
+      "id": 66,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-66.jpg",
+      "title": "Квадрокоптер",
+      "price": 4999,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 67,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-67.jpg",
+      "title": "Квадрокоптер",
+      "price": 4000,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black"]
+    },
+    {
+      "id": 68,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-68.jpg",
+      "title": "Квадрокоптер",
+      "price": 3990,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["white"]
+    },
+    {
+      "id": 69,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-69.jpg",
+      "title": "Квадрокоптер",
+      "price": 3200,
+      "isNew": false,
+      "bluetooth": true,
+      "colors": ["black", "red"]
+    },
+    {
+      "id": 70,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-70.jpg",
+      "title": "Квадрокоптер",
+      "price": 5000,
+      "isNew": false,
+      "bluetooth": false,
+      "colors": ["white", "red"]
+    },
+    {
+      "id": 71,
+      "category": "quadcopter",
+      "image": "/images/catalog/quadcopter/product-71.jpg",
+      "title": "Квадрокоптер",
+      "price": 3000,
+      "isNew": true,
+      "bluetooth": true,
+      "colors": ["black", "white"]
+    }
+  ]
+}

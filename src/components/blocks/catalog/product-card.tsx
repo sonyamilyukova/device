@@ -1,7 +1,7 @@
 import React from 'react';
 import { IDevice } from '../../../data/devices';
-import Title from '../title/title';
-import { StyledCard, Image, Price, StyledButton, New } from './styles';
+import Title from '../../ui/title/title';
+import { StyledCard, Image, Price, StyledButton, New } from './product-card/styles';
 import { buyProduct } from '../../../model/cart';
 
 const ProductCard: React.FC<{ product: IDevice }> = ({ product }) => {

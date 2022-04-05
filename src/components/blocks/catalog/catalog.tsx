@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyledCatalog, Wrapper, Sorting } from './styles';
 import ProductsList from './products-list';
-import { changeSorting } from '../../../model/products';
 import { Title } from '../../ui';
 
 const Catalog: React.FC = () => {
@@ -10,8 +9,8 @@ const Catalog: React.FC = () => {
       <Wrapper>
         <Sorting>
           <Title as='h3' size='S'>Сортировка:</Title>
-          <select onChange={(evt) => changeSorting(evt.target.value)}>
-            <option value='by-lower-price' selected>Сначала дешевые</option>
+          <select>
+            <option value='by-lower-price'>Сначала дешевые</option>
             <option value='by-higher-price'>Сначала дорогие</option>
             <option value='by-novelty'>Сначала новые</option>
           </select>

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Button from '../button/button';
+import styled from "styled-components";
+import { Button } from "../../../../ui";
 
-export interface INewProps {
+interface INewProps {
   display?: boolean;
 }
 

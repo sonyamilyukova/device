@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyledNav, List, StyledLink } from './styles';
-import { $categories } from '../../../model/products';
-import { useStore } from 'effector-react';
+import { categories } from "../../../const";
 
 export interface ICatalogNav {
   display: boolean;
@@ -9,8 +8,6 @@ export interface ICatalogNav {
 }
 
 const CatalogNav: React.FC<ICatalogNav> = ({ display, setDisplay }) => {
-  const categories = useStore($categories);
-
   return (
     <StyledNav display={display}>
       <List>

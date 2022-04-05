@@ -1,11 +1,8 @@
 import React from 'react';
-import { useStore } from 'effector-react';
-import { $categories } from '../../../model/products';
+import { categories } from "../../../const";
 import { StyledMenu, List, StyledLink, Icon } from './styles';
 
 const Menu: React.FC = () => {
-  const categories = useStore($categories);
-
   return (
     <StyledMenu>
       <List>

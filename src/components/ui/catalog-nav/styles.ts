@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 interface INav {
-  display?: boolean;
+  open?: boolean;
 }
 
 export const StyledNav = styled.div<INav>`
-  display: ${(props) => props.display ? 'block' : 'none'};
+  display: ${(props) => props.open ? 'block' : 'none'};
   background-color: ${(props) => props.theme.colors.themeMain};
   position: absolute;
   left: 0;

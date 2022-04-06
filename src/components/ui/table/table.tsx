@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledTable, Key, Value } from './styles';
+import { StyledTable, Row, Key, Value } from './styles';
 
 export interface ITable {
   rows: {
@@ -11,11 +11,11 @@ export interface ITable {
 const Table: React.FC<ITable> = ({ rows }) => {
   return (
     <StyledTable>
-      {rows.map((row)  => (
-        <>
+      {rows.map((row, index)  => (
+        <Row key={index}>
           <Value>{row.value}</Value>
           <Key>{row.quality}</Key>
-        </>
+        </Row>
       ))}
     </StyledTable>
   )

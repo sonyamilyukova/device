@@ -9,7 +9,7 @@ export interface ICatalogNav {
 
 const CatalogNav: React.FC<ICatalogNav> = ({ display, setDisplay }) => {
   return (
-    <StyledNav display={display}>
+    <StyledNav open={display}>
       <List>
         {categories.map((category) => (
           <li key={category.name}>

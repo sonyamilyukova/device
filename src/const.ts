@@ -36,6 +36,33 @@ export const categories:
   }
 ]
 
+export const services:
+  {
+    id: number;
+    title: string;
+    text: string;
+    icon: string;
+  }[] = [
+  {
+    id: 1,
+    title: 'Доставка',
+    text: 'Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.',
+    icon: '/images/tabs/delivery.svg',
+  },
+  {
+    id: 2,
+    title: 'Гарантия',
+    text: 'Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.',
+    icon: '/images/tabs/guarantee.svg',
+  },
+  {
+    id: 3,
+    title: 'Кредит',
+    text: 'Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.',
+    icon: '/images/tabs/credit.svg',
+  },
+]
+
 export const sortingOptions:
   {
     id: number;

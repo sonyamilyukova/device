@@ -1,9 +1,8 @@
 import { createStore, createEvent } from "effector";
-import { IDevice } from '../data/devices';
 
-export const buyProduct = createEvent<IDevice>();
+export const buyProduct = createEvent<any>();
 
-export const $cart = createStore<IDevice[]>([])
+export const $cart = createStore<any[]>([])
   .on(buyProduct, (state, product) =>
     state.find((el) => el.id === product.id) ? state : [...state, product]
   );

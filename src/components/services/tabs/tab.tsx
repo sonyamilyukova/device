@@ -1,9 +1,9 @@
-import React from 'react';
-import { ITab } from '../../../data/tabs';
-import { Content, TextBlock } from './styles';
-import { Title } from '../../ui';
+import React from "react";
+import { TTab } from "../../types";
+import { Content, TextBlock } from "./styles";
+import { Title } from "../../ui";
 
-const Tab: React.FC<{ tab?: ITab }> = ({ tab }) => {
+const Tab: React.FC<{ tab?: TTab }> = ({ tab }) => {
   return tab ? (
     <Content background={tab.icon ? tab.icon : ''}>
       <TextBlock>

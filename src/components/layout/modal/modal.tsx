@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Wrapper, Overlay, StyledModal, CloseButton } from './styles';
 
 export interface IPopup {

@@ -1,14 +1,11 @@
 import React from "react";
 import ProductCard from "./product-card/product-card";
-import { useParams } from "react-router-dom";
 import { useStore } from "effector-react";
+import { $products } from "../../model";
 import { Products, ListItem, Text } from "./styles";
-import { $products, loadProducts } from "../../model";
 
 const ProductList: React.FC = () => {
   const products = useStore($products);
-  const { category } = useParams();
-
   return (
     <div>
       <h3 className="visually-hidden">Список товаров</h3>

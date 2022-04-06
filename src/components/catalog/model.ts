@@ -1,7 +1,7 @@
-import db from "../../db.json";
-import {TProduct, TSorting, TFilters } from "./types";
-import { createStore, createEvent, createEffect } from "effector";
+import { TProduct, TSorting, TFilters } from "../types";
+import { createStore, createEvent } from "effector";
 import { filterList } from "../../const";
+import { loadData } from "../server";
 
 // Сортировка
 export const changeSortingValue = createEvent<string>();
@@ -13,7 +13,7 @@ export const $sorting = createStore<TSorting>({
   return {...state, value: newValue}
 }) .on(changeSortingDirection, (state, newDirection) => {
   return {...state, direction: newDirection}
-})
+});
 
 // Начальные фильтры
 export const $defaultFilters = createStore<TFilters>({
@@ -23,23 +23,8 @@ export const $defaultFilters = createStore<TFilters>({
   bluetooth: "yes"
 });
 
-// Загрузка товаров (как будто) с сервера
-export const loadProducts = createEffect<{args: any}, TProduct[]>(() =>
-  fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    body: JSON.stringify(db.products),
-    headers: {'Content-type': 'application/json; charset=UTF-8'}
-  }).then(response => {
-    if (!response.ok) {
-      throw new Error(response.statusText)
-    }
-    return response.json()
-  }).then(data => {
-    const result = Object.values(data).slice(0, -1);
-    return result as TProduct[];
-  }).catch(() => [])
-);
-
+// Загрузка товаров
+export const loadProducts = loadData("products");
 export const $loadedProducts = createStore<TProduct[]>([]);
 
 // Манипуляции со списком товаров
@@ -88,10 +73,8 @@ export const $products = createStore<TProduct[]>([])
       case "price":
         switch (sorting.direction) {
           case "from-lower":
-            // console.log('price lower')
             return [...products].sort((a, b) => a.price - b.price);
           case "from-higher":
-            // console.log('price higher')
             return [...products].sort((a, b) => b.price - a.price);
         } break
 
@@ -99,10 +82,8 @@ export const $products = createStore<TProduct[]>([])
       case "novelty":
         switch (sorting.direction) {
           case "from-lower":
-            // console.log('novelty lower')
             return [...products].sort((a, b) => a.isNew ? 0 : b.isNew ? -1 : 1);
           case "from-higher":
-            // console.log('novelty higher')
             return [...products].sort((a, b) => a.isNew ? 0 : b.isNew ? 1 : -1);
         } break
       default: return products;

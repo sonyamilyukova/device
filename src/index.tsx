@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from '../src/router/app';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./app/app";
 import { ThemeProvider } from "styled-components";
-import { deviceTheme } from './themes/device';
+import { deviceTheme } from "./themes/device";
 
 ReactDOM.render(
   <React.StrictMode>

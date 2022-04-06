@@ -16,7 +16,7 @@ export const Column = styled.div`
     ${(props) => props.theme.colors.basicGrey} 70px, ${(props) => props.theme.colors.basicLightGrey} 0);
 
     & ${Wrapper} {
-      padding: 0 70px 0 ${(props) => props.theme.pagePadding};
+      padding: 0 70px 0 200px;
       margin-left: auto;
     }
   }

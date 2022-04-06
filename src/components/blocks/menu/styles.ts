@@ -7,7 +7,7 @@ interface IIconProps {
 }
 
 export const StyledMenu = styled.section`
-  padding: 0 ${(props) => props.theme.pagePadding};
+  padding: 80px ${(props) => props.theme.pagePadding};
 `;
 
 export const List = styled.ul`

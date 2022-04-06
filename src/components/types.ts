@@ -4,9 +4,15 @@ export type TProduct = {
   title: string;
   price: number;
   category: string;
+  moto?: string;
+  description?: string;
   isNew?: boolean;
   bluetooth?: boolean;
   colors?: string[];
+  qualities?: {
+    quality: string;
+    value: string;
+  }[];
 }
 
 export type TSorting = {
@@ -19,4 +25,11 @@ export type TFilters = {
   maxPrice: number;
   colors: string[];
   bluetooth: "yes" | "no";
+}
+
+export type TTab = {
+  id: number;
+  title: string;
+  text: string;
+  icon: string;
 }

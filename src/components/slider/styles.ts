@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { IBulletProps } from './slider';
-import Button from '../../ui/button/button';
+import styled from "styled-components";
+import { IBulletProps } from "./slider";
+import { Button } from "../ui";
 
 export const StyledSlider = styled.section`
   padding: 0 ${(props) => props.theme.pagePadding};
@@ -45,7 +45,7 @@ export const RightArrow = styled.button`
   bottom: 0;
   right: 0;
   margin: auto;
-  background: url('/images/arrows/tall-arrow.svg') no-repeat center;
+  background: url(${"/images/arrows/tall-arrow.svg"}) no-repeat center;
   width: 40px;
   height: 80px;
   border: none;

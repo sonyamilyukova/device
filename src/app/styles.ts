@@ -1,36 +1,36 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 800;
     font-style: normal;
     font-display: swap;
-    src: local('Raleway'), url('../fonts/raleway-800.woff2') format('woff2');
+    src: local("Raleway"), url("../fonts/raleway-800.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Rubik';
+    font-family: "Rubik";
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: local('Rubik'), url('../fonts/rubik-400.woff2') format('woff2');
+    src: local("Rubik"), url("../fonts/rubik-400.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Rubik';
+    font-family: "Rubik";
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-    src: local('Rubik'), url('../fonts/rubik-700.woff2') format('woff2');
+    src: local("Rubik"), url("../fonts/rubik-700.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Rubik';
+    font-family: "Rubik";
     font-weight: 800;
     font-style: normal;
     font-display: swap;
-    src: local('Rubik'), url('../fonts/rubik-800.woff2') format('woff2');
+    src: local("Rubik"), url("../fonts/rubik-800.woff2") format("woff2");
   }
   
   *,
@@ -71,5 +71,4 @@ export const GlobalStyle = createGlobalStyle`
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-
 `;

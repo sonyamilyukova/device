@@ -70,6 +70,7 @@
     "@types/react": "^17.0.40",
     "@types/react-router-hash-link": "^2.4.5",
     "@types/styled-components": "^5.1.24",
+    "jest-watch-typeahead": "^0.6.5",
     "react-app-rewired": "^2.2.1",
     "react-router-hash-link": "^2.4.3",
     "webpack": "^5.70.0"

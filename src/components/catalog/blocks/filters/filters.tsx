@@ -60,7 +60,7 @@ const Filters: React.FC = () => {
                       value={option.value}
                       checked={colors.includes(option.value)}
                       onChange={evt => colors.includes(evt.target.value) ?
-                        setColors(colors.filter((color) => color != evt.target.value)) :
+                        setColors(colors.filter((color) => color !== evt.target.value)) :
                         setColors([...colors, evt.target.value])
                       }
                     />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Title } from "../../../../ui";
-import { TProduct } from "../../../types";
+import { TProduct } from "../../../../types";
 import { StyledCard, Image, Price, StyledButton, New } from "./styles";
 
 const ProductCard: React.FC<{ product: TProduct }> = ({ product }) => {

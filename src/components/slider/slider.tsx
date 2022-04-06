@@ -1,8 +1,7 @@
-import React, { useState }  from 'react';
-import { useStore } from 'effector-react';
-import { $slides } from '../../../model/slides';
-import { buyProduct } from '../../../model/cart';
-import { Title, Table } from '../../ui';
+import React, { useState } from "react";
+import { useStore } from "effector-react";
+import { $slides, loadSlides } from "./model";
+import { Title, Table } from "../ui";
 import {
   StyledSlider,
   Slides,
@@ -15,7 +14,7 @@ import {
   BulletList,
   Bullet,
   StyledButton
-} from './styles';
+} from "./styles";
 
 export interface IBulletProps {
   isCurrent: boolean;
@@ -27,9 +26,9 @@ const Slider: React.FC = () => {
   const lastSlide = slides.length - 1;
   const slide = slides[currentSlide];
 
-  return (
+  return slides?.length ? (
     <StyledSlider>
-      <h2 className='visually-hidden'>Примеры товаров</h2>
+      <h2 className="visually-hidden">Примеры товаров</h2>
       <Slides>
         <Slide>
           <Number>{slide.id.toString().length === 1 ? `0${slide.id}` : slide.id}</Number>
@@ -37,29 +36,29 @@ const Slider: React.FC = () => {
             <LeftArrow
               type='button'
               onClick={() =>
-              currentSlide === 0 ?
-                setCurrentSlide(lastSlide) :
-                setCurrentSlide(currentSlide - 1)}>
-              <span className='visually-hidden'>Предыдущий слайд</span>
+                currentSlide === 0 ?
+                  setCurrentSlide(lastSlide) :
+                  setCurrentSlide(currentSlide - 1)}>
+              <span className="visually-hidden">Предыдущий слайд</span>
             </LeftArrow>
             <img src={slide.image} alt={slide.title} width={560} height={560} />
             <RightArrow
-              type='button'
+              type="button"
               onClick={() =>
                 currentSlide === lastSlide ?
                   setCurrentSlide(0) :
                   setCurrentSlide(currentSlide + 1)}>
-              <span className='visually-hidden'>Следующий слайд</span>
+              <span className="visually-hidden">Следующий слайд</span>
             </RightArrow>
           </Wrapper>
           <TextContent>
-            <Title as='h3' size='L' marginTop={130} marginBottom={30}>{slide.moto}</Title>
+            <Title as="h3" size="L" marginTop={130} marginBottom={30}>{slide.moto}</Title>
             <p>{slide.description}</p>
             <StyledButton
               highlighted
               light
-              type='button'
-              onClick={() => buyProduct(slide)}
+              type="button"
+              onClick={() => () => {}}
             >
               Купить
             </StyledButton>
@@ -67,7 +66,7 @@ const Slider: React.FC = () => {
               {slides.map((_, index) => (
                 <li key={index}>
                   <Bullet
-                    type='button'
+                    type="button"
                     onClick={() => setCurrentSlide(index)}
                     isCurrent={index === currentSlide}
                   />
@@ -81,7 +80,7 @@ const Slider: React.FC = () => {
         </Slide>
       </Slides>
     </StyledSlider>
-  )
+  ) : null
 };
 
 export default Slider;

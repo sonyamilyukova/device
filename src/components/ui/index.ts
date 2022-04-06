@@ -2,7 +2,6 @@ import Logo from './logo/logo';
 import Search from './search/search';
 import Nav from './nav/nav';
 import UserNav from "./user-nav/user-nav";
-import ProductCard from '../blocks/catalog/product-card';
 import Title from './title/title';
 import Range from './range/range';
 import Input from './input/input';
@@ -27,7 +26,6 @@ export {
   Search,
   Nav,
   UserNav,
-  ProductCard,
   Title,
   Range,
   Input,

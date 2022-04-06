@@ -54,6 +54,16 @@ export const RangeBar = styled.input`
     background-color: ${(props) => props.theme.colors.basicLightGrey};
     cursor: pointer;
   }
+  
+  &:active::-webkit-slider-thumb {
+    background-color: ${(props) => props.theme.colors.basicBlack};
+  }
+  &:active::-moz-range-thumb {
+    background-color: ${(props) => props.theme.colors.basicBlack};
+  }
+  &:active::-ms-thumb {
+    background-color: ${(props) => props.theme.colors.basicBlack};
+  }
 
   &::-moz-range-progress {
     background-color: ${(props) => props.theme.colors.basicBlack};

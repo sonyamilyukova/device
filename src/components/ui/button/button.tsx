@@ -5,6 +5,7 @@ export interface IButton {
   children: React.ReactNode;
   type?: string;
   width?: string;
+  height?: string;
   marginTop?: number;
   marginRight?: number;
   marginBottom?: number;
@@ -13,6 +14,7 @@ export interface IButton {
   className?: string;
   highlighted?: boolean;
   light?: boolean;
+  border?: boolean;
   onClick?: any;
 }
 
@@ -20,6 +22,7 @@ const Button: React.FC<IButton> =
   ({ children,
      type,
      width,
+     height,
      marginTop,
      marginRight,
      marginBottom,
@@ -28,12 +31,14 @@ const Button: React.FC<IButton> =
      className,
      highlighted,
      light,
+     border,
      onClick }) => {
   return (
     <StyledButton
       as={as}
       type={type}
       width={width}
+      height={height}
       marginTop={marginTop}
       marginRight={marginRight}
       marginBottom={marginBottom}
@@ -41,6 +46,7 @@ const Button: React.FC<IButton> =
       className={className}
       highlighted={highlighted}
       light={light}
+      border={border}
       onClick={onClick}
     >
       {children}

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Products = styled.ol`
   list-style: none;
   padding: 0;
-  margin: 70px 0 77px;
+  margin: 70px 0 90px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

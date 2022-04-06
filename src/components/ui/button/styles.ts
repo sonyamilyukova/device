@@ -4,6 +4,7 @@ import { IButton } from "./button";
 export const StyledButton = styled.button<IButton>`
   display: inline-block;
   width: ${(props) => props.width ? props.width : 'auto'};
+  height: ${(props) => props.height ? props.height : 'auto'};
   font-family: ${(props) => props.theme.fontAdditional};
   font-weight: 800;
   font-size: ${(props) => props.theme.fontSize.S};
@@ -13,7 +14,7 @@ export const StyledButton = styled.button<IButton>`
   background: none;
   text-decoration: none;
   text-transform: uppercase;
-  border: none;
+  border: ${(props) => props.border ? `3px solid ${props.theme.colors.basicBlack}` : "none"};
   cursor: pointer;
   letter-spacing: ${(props) => props.theme.letterSpacing};
   margin-top: ${(props) => props.marginTop ? `${props.marginTop}px` : '0'};
@@ -52,6 +53,7 @@ export const StyledButton = styled.button<IButton>`
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.3);
     
     &:before {
       background-color: ${(props) => props.light ? props.theme.colors.themeMain : props.theme.colors.themeDark};

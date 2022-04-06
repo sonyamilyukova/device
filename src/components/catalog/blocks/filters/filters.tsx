@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useStore } from "effector-react";
-import { $loadedProducts, $defaultFilters, filterProducts, updateProducts } from "../../model";
+import { $loadedProducts, updateProducts, filterProducts } from "../product-list/model";
+import { $defaultFilters } from "./model";
 import { filterList } from "../../../../const";
 import { Title, Range, Control, Button } from "../../../ui";
 import { Header, Form, Fieldset, List } from "./styles";

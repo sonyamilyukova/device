@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "./product-card/product-card";
 import { useStore } from "effector-react";
-import { $products } from "../../model";
+import { $products } from "./model";
 import { Products, Text, ButtonWrapper } from "./styles";
 import { Button } from "../../../ui";
 import { useParams } from "react-router-dom";

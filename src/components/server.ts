@@ -1,10 +1,10 @@
 import { createEffect } from "effector";
-import { TProduct } from "./types";
+import { TProduct, TUser } from "./types";
 import db from "../db.json";
 
 // Загрузка данных (как будто) с сервера
 export const loadData = (type: string) =>
-  createEffect<any, TProduct[]>(() =>
+  createEffect<any, TProduct[] | TUser[]>(() =>
     fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       body: type === "products" ? JSON.stringify(db.products) :
@@ -17,6 +17,6 @@ export const loadData = (type: string) =>
       return response.json()
     }).then(data => {
       const result = Object.values(data).slice(0, -1);
-      return result as TProduct[];
+      return result as TUser[] | TProduct[];
     }).catch(() => [])
   );

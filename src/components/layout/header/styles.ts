@@ -1,14 +1,13 @@
-import styled from 'styled-components';
-import { Logo, Search, Nav, UserNav } from '../../ui';
+import styled from "styled-components";
+import { Logo, Search, Nav } from "../../ui";
+import UserNav from "../../user/user-nav/user-nav";
 
 interface IPlusButtonProps {
   open?: boolean;
 }
 
 export const StyledHeader = styled.header`
-  padding: ${(props) => props.theme.pagePadding};
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 ${(props) => props.theme.pagePadding};
 `;
 
 export const Wrapper = styled.div`

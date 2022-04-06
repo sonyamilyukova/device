@@ -1,8 +1,8 @@
-import React from 'react';
-import { Popup } from '../../layout';
-import { useStore } from 'effector-react';
-import { $cart } from '../../../model/cart';
-import { ProductsList } from './styles';
+import React from "react";
+import { Popup } from "../../layout";
+import { useStore } from "effector-react";
+import { $cart } from "../model";
+import { ProductsList } from "./styles";
 
 export interface ICart {
   isOpen?: boolean;

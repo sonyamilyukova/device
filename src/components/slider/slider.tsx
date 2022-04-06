@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStore } from "effector-react";
-import { $slides, loadSlides } from "./model";
+import { $slides } from "./model";
 import { Title, Table } from "../ui";
 import {
   StyledSlider,

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStore } from 'effector-react';
-import { $services, $currentTab, changeTab }  from "../model";
+import { $services, $currentTab, changeTab }  from "./model";
 import { StyledTabs, Wrapper, Nav, Button } from "./styles";
-import Tab from "./tab";
+import Tab from "./tab/tab";
 
 const Tabs: React.FC = () => {
   const tabs = useStore($services);

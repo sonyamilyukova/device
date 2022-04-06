@@ -6,7 +6,28 @@
       "password": "qwerty",
       "email": "smshakirova@mail.ru",
       "phone": "+79827578103",
-      "productIds": [1, 2]
+      "cart": [
+        {
+          "id": 10,
+          "category": "vr",
+          "image": "/images/products/vr/product-10.jpg",
+          "title": "Очки виртуальной реальности",
+          "price": 1000,
+          "isNew": false,
+          "bluetooth": true,
+          "colors": ["black"]
+        },
+        {
+          "id": 54,
+          "category": "watch",
+          "image": "/images/products/watch/product-54.jpg",
+          "title": "Умные часы",
+          "price": 500,
+          "isNew": false,
+          "bluetooth": true,
+          "colors": ["black", "blue"]
+        }
+      ]
     }
   ],
   "slides": [

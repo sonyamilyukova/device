@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from '../../layout';
 import { Title, TextInput, Button, Alert } from '../../ui';
 import { useStore } from "effector-react";
-import { $users, loadUsers, findUser } from '../../../model/users';
+import { $users, loadUsers, logIn } from "../model";
 import { Wrapper } from './styles';
 
 export interface ILoginForm {
@@ -74,17 +74,14 @@ const LoginForm: React.FC<ILoginForm> = ({ isOpen, setOpen, alert, setAlert }) =
             marginTop={65}
             highlighted
             onClick={() => {
+              // @ts-ignore
               loadUsers()
                 .then(() => {
-                  findUser({
+                  logIn({
                     name: name,
                     password: password
                   })
                 })
-                .then(() => {
-                  if (users.loginError) setAlert(true);
-                  else setOpen(false);
-                });
             }}
           >
             Войти

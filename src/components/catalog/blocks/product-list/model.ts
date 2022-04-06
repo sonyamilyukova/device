@@ -1,27 +1,7 @@
-import { TProduct, TSorting, TFilters } from "../types";
-import { createStore, createEvent } from "effector";
-import { filterList } from "../../const";
-import { loadData } from "../server";
-
-// Сортировка
-export const changeSortingValue = createEvent<string>();
-export const changeSortingDirection = createEvent<string>();
-export const $sorting = createStore<TSorting>({
-  value: "price",
-  direction: "from-higher"
-}).on(changeSortingValue, (state, newValue) => {
-  return {...state, value: newValue}
-}) .on(changeSortingDirection, (state, newDirection) => {
-  return {...state, direction: newDirection}
-});
-
-// Начальные фильтры
-export const $defaultFilters = createStore<TFilters>({
-  minPrice: 0,
-  maxPrice: 5000,
-  colors: ["black", "white"],
-  bluetooth: "yes"
-});
+import { TProduct, TSorting, TFilters } from "../../../types";
+import { createStore, createEvent, sample } from "effector";
+import { filterList } from "../../../../const";
+import { loadData } from "../../../server";
 
 // Загрузка товаров
 export const loadProducts = loadData("products");
@@ -33,7 +13,7 @@ export const updateProducts = createEvent<TProduct[]>();
 export const filterProducts = createEvent<TFilters>();
 export const sortProducts = createEvent<TSorting>();
 
-// Список товаров
+// @ts-ignore
 export const $products = createStore<TProduct[]>([])
   .on(loadProducts.doneData, (_, payload) => payload)
   .on(updateProducts, (_, payload) => payload)
@@ -89,3 +69,9 @@ export const $products = createStore<TProduct[]>([])
       default: return products;
     }
   });
+
+sample({
+  source: $products,
+  clock: changeProductsCategory,
+  target: $loadedProducts
+});

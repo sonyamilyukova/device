@@ -1,7 +1,6 @@
 import Logo from './logo/logo';
 import Search from './search/search';
 import Nav from './nav/nav';
-import UserNav from "./user-nav/user-nav";
 import Title from './title/title';
 import TextInput from './inputs/text-input/text-input';
 import Button from './button/button';
@@ -22,7 +21,6 @@ export {
   Logo,
   Search,
   Nav,
-  UserNav,
   Title,
   TextInput,
   Button,

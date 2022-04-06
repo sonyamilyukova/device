@@ -1,3 +1,12 @@
+export type TUser = {
+  id: number;
+  name: string;
+  password: string;
+  email: string;
+  phone: string;
+  cart: TProduct[]
+}
+
 export type TProduct = {
   id: number;
   image: string;

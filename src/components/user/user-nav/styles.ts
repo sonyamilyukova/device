@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Cart } from '../../blocks';
+import styled from "styled-components";
+import Cart from "../cart/cart";
 
 interface IListProps {
   width?: string;

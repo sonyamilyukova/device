@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "../components/slider/slider";
-import Tabs from "../components/services/tabs/tabs";
-import { Menu } from "../components/blocks";
+import Tabs from "../components/tabs/tabs";
+import Menu from "../components/categories/menu/menu";
 
 const MainPage: React.FC = () => {
   return (

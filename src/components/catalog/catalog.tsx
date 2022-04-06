@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import { sample }  from "effector";
 import Filters from "./blocks/filters/filters";
 import Sorting from "./blocks/sorting/sorting";
 import ProductList from "./blocks/product-list/product-list";
 import { InnerHeader, Title, Breadcrumbs } from "../ui";
 import { categories } from "../../const";
 import { useParams } from "react-router-dom";
-import { $products, loadProducts, changeProductsCategory, $loadedProducts } from "./model";
+import { loadProducts, changeProductsCategory } from "./blocks/product-list/model";
 import { Layout, Column, Wrapper } from "./styles";
 
 const Catalog: React.FC = () => {
@@ -18,12 +17,6 @@ const Catalog: React.FC = () => {
     loadProducts().then(() => changeProductsCategory(category)),
     [category]
   );
-
-  sample({
-    clock: changeProductsCategory,
-    source: $products,
-    target: $loadedProducts
-  });
 
   return (
     <section>

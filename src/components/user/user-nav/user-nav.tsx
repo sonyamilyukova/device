@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { LoginForm } from '../../blocks';
-import { List, Login, CartTitle, StyledCart, Logout, ProductsNumber } from './styles';
-import { $users, logOut } from "../../../model/users";
-import { $cart } from '../../../model/cart';
+import React, { useState } from "react";
 import { useStore } from "effector-react";
+import { $cart, $users, logOut } from "../model";
+import LoginForm from "../login-form/login-form";
+import { List, Login, CartTitle, StyledCart, Logout, ProductsNumber } from "./styles";
 
 export interface IUserNavProps {
   width?: string;
@@ -19,7 +18,7 @@ const UserNav: React.FC<IUserNavProps> = ({ width, className }) => {
   return (
     <List className={className} width={width}>
       <li key='1'>
-        {users.isLogged ? (
+        {users.currentUser ? (
           <>
             <Login as='p' withoutHover>
               {users.currentUser.name}

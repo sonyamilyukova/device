@@ -2,17 +2,11 @@ import styled from "styled-components";
 
 interface IButtonProps {
   isActive: boolean;
-};
-
-interface IContentProps {
-  background?: string;
-};
+}
 
 export const StyledTabs = styled.section`
   background: linear-gradient(to bottom, white 100px, ${(props) => props.theme.colors.basicLight} 0);
-  padding: ${(props) => props.theme.pagePadding};
-  padding-top: 0;
-  padding-bottom: 70px;
+  padding: 0 ${(props) => props.theme.pagePadding} 70px;
   display: grid;
   grid-template-columns: ${(props) => props.theme.layoutColumnWide} 1fr;
   align-items: center;
@@ -48,24 +42,3 @@ export const Button = styled.button<IButtonProps>`
   text-transform: uppercase;
   cursor: ${(props) => props.isActive ? 'unset' : 'pointer'};
 `;
-
-export const Content = styled.div<IContentProps>`
-  margin-right: 60px;
-  padding-right: 240px;
-  height: 100%;
-  background-image: url(${(props) => props.background});
-  background-repeat: no-repeat;
-  background-position: top 50px right;
-  background-size: 170px auto;
-  display: grid;
-  align-items: center;
-`;
-
-export const TextBlock = styled.div`
-  align-self: start;
-
-  p {
-    color: ${(props) => props.theme.colors.basicDark};
-  }
-`;
-

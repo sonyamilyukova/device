@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "./product-card/product-card";
 import { useStore } from "effector-react";
 import { $products } from "../../model";
-import { Products, ListItem, Text } from "./styles";
+import { Products, Text, ButtonWrapper } from "./styles";
 import { Button } from "../../../ui";
 import { useParams } from "react-router-dom";
 
@@ -24,17 +24,19 @@ const ProductList: React.FC = () => {
       {products?.length ? (
         <Products>
           {products.map((product) => (
-            <ListItem key={"product-" + product.id}>
+            <li key={"product-" + product.id}>
               <ProductCard product={product} />
-            </ListItem>
+            </li>
           ))}
-          {isSliced ? (
-            <Button width="100%" height="55px" marginTop={44} border
-                    onClick={() => (length + 4) < productsStore.length ?
-                      setLength(length + 4) :
-                      setSliced(false)}>
-              Загрузить ещё
-            </Button>
+          {isSliced && productsStore.length >= 4 ? (
+            <ButtonWrapper>
+              <Button width="100%" height="55px" marginTop={44} border
+                      onClick={() => (length + 4) < productsStore.length ?
+                        setLength(length + 4) :
+                        setSliced(false)}>
+                Загрузить ещё
+              </Button>
+            </ButtonWrapper>
           ) : null}
         </Products>
       ) : <Text>К сожалению, таких товаров пока нет</Text>}

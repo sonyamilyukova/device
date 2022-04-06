@@ -4,9 +4,8 @@ export const Products = styled.ol`
   list-style: none;
   padding: 0;
   margin: 70px 0 90px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 360px);
   gap: ${(props) => props.theme.layoutGap};
   max-width: 820px;
 `;
@@ -17,6 +16,6 @@ export const Text = styled.p`
   font-size: 19px;
 `;
 
-export const ListItem = styled.li`
-  width: 360px;
+export const ButtonWrapper = styled.div`
+  grid-column: 1 / -1;
 `;

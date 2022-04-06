@@ -4,6 +4,7 @@ import PageLayout from "../components/layout";
 import MainPage from "../pages/main-page";
 import CatalogPage from "../pages/catalog-page";
 import { GlobalStyle } from "./styles";
+import { loadSlides } from "../components/slider/model";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -16,6 +17,9 @@ const ScrollToTop = () => {
 }
 
 const App: React.FC = () => {
+  // @ts-ignore
+  useEffect(() => loadSlides());
+
   return (
     <>
       <GlobalStyle />

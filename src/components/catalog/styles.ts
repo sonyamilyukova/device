@@ -7,7 +7,7 @@ export const Layout = styled.div`
 `;
 
 export const Wrapper = styled.div`
-    width: 100%;
+  width: 100%;
 `;
 
 export const Column = styled.div`

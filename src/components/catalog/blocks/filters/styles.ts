@@ -37,19 +37,3 @@ export const List = styled.ul`
   line-height: ${(props) => props.theme.lineHeight.XS};
 `;
 
-export const ListItem = styled.li`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-`;
-
-export const Control = styled.input`
-  width: 20px;
-  height: 20px;
-  margin-right: 17px;
-  cursor: pointer;
-`;
-
-export const Label = styled.label`
-  cursor: pointer;
-`;

@@ -24,12 +24,12 @@ export const Fieldset = styled.fieldset`
 export const Select = styled.select`
   display: block;
   box-sizing: border-box;
-  background: url(${"/images/arrows/dropdown.svg"}) no-repeat top 50% right 15px;
+  background: url(${"/images/arrows/dropdown.svg"}) no-repeat top 14px right 15px;
   border: none;
   font-family: ${(props) => props.theme.fontMain};
   font-size: ${(props) => props.theme.fontSize.XS};
   line-height: ${(props) => props.theme.lineHeight.XS};
-  padding: 5px 40px 5px 15px;
+  padding: 7px 40px 5px 15px;
   margin: 0;
   -webkit-appearance: none;
   cursor: pointer;

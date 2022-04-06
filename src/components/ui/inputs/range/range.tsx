@@ -1,4 +1,5 @@
 import React from "react";
+import { RangeBar, Label } from "./styles";
 
 interface IRangeBarProps {
   min: number;
@@ -9,21 +10,22 @@ interface IRangeBarProps {
   onChange: (args: any) => any;
 }
 
-const RangeBar: React.FC<IRangeBarProps> = ({ min, max, name, value, label, onChange}) => {
+const Range: React.FC<IRangeBarProps> = ({ min, max, name, value, label, onChange}) => {
   return (
     <div>
-      <input
+      <RangeBar
         type="range"
         name={name}
         min={min}
         max={max}
+        step={10}
         value={value}
         id={name}
         onChange={onChange}
       />
-      <label htmlFor={name}>{label}</label>
+      <Label htmlFor={name}>{label + " " + value}</Label>
     </div>
   )
 }
 
-export default RangeBar;
+export default Range;

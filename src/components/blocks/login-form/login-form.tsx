@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from '../../layout';
-import { Title, Input, Button, Alert } from '../../ui';
+import { Title, TextInput, Button, Alert } from '../../ui';
 import { useStore } from "effector-react";
 import { $users, loadUsers, findUser } from '../../../model/users';
 import { Wrapper } from './styles';
@@ -31,7 +31,7 @@ const LoginForm: React.FC<ILoginForm> = ({ isOpen, setOpen, alert, setAlert }) =
         </Alert>
       ) : null}
       <form onSubmit={evt => evt.preventDefault()}>
-        <Input
+        <TextInput
           width={register ? '100%' : '65%'}
           label='Имя:'
           type='text'
@@ -42,7 +42,7 @@ const LoginForm: React.FC<ILoginForm> = ({ isOpen, setOpen, alert, setAlert }) =
         />
         {register ? (
           <Wrapper>
-            <Input
+            <TextInput
               label='E-mail:'
               type='email'
               placeholder='krasotka92@mail.ru'
@@ -50,7 +50,7 @@ const LoginForm: React.FC<ILoginForm> = ({ isOpen, setOpen, alert, setAlert }) =
               value={email}
               onChange={evt => setEmail(evt.target.value)}
             />
-            <Input
+            <TextInput
               label='Телефон:'
               type='phone'
               placeholder='+7(000)000-00-00'
@@ -60,7 +60,7 @@ const LoginForm: React.FC<ILoginForm> = ({ isOpen, setOpen, alert, setAlert }) =
             />
           </Wrapper>
         ) : null}
-        <Input
+        <TextInput
           width={register ? '100%' : '65%'}
           label='Пароль:'
           type='password'

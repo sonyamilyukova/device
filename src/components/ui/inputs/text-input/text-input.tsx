@@ -14,7 +14,7 @@ export interface IInput {
   onChange?: (params: any) => any;
 }
 
-const Input: React.FC<IInput> =
+const TextInput: React.FC<IInput> =
   ({ type,
      label,
      placeholder,
@@ -38,4 +38,4 @@ const Input: React.FC<IInput> =
   )
 }
 
-export default Input;
+export default TextInput;

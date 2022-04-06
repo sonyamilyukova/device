@@ -2,14 +2,8 @@ import React, { useState } from "react";
 import { useStore } from "effector-react";
 import { $loadedProducts, $defaultFilters, filterProducts, updateProducts } from "../../model";
 import { filterList } from "../../../../const";
-import { Title, RangeBar, Checkbox, RadioButton } from "../../../ui";
-import {
-  Header,
-  Form,
-  Fieldset,
-  List,
-  ListItem
-} from "./styles";
+import { Title, Range, Control, Button } from "../../../ui";
+import { Header, Form, Fieldset, List } from "./styles";
 
 const Filters: React.FC = () => {
   const loadedProducts = useStore($loadedProducts);
@@ -40,9 +34,9 @@ const Filters: React.FC = () => {
             <Title as="legend" size="XS">{filter.display}</Title>
             <List>
               {filter.options!.map((option) => (
-                <ListItem key={filter.name + '-' + option.id}>
+                <li key={filter.name + '-' + option.id}>
                   {filter.type === "range" ? (
-                    <RangeBar
+                    <Range
                       label={option.display}
                       min={filter.min!}
                       max={filter.max!}
@@ -54,7 +48,8 @@ const Filters: React.FC = () => {
                       }
                     />
                   ) : filter.type === "checkbox" ? (
-                    <Checkbox
+                    <Control
+                      type="checkbox"
                       label={option.display}
                       name={filter.name}
                       value={option.value}
@@ -65,7 +60,8 @@ const Filters: React.FC = () => {
                       }
                     />
                   ) : filter.type === "radio" ? (
-                    <RadioButton
+                    <Control
+                      type="radio"
                       label={option.display}
                       name={filter.name}
                       value={option.value}
@@ -73,11 +69,11 @@ const Filters: React.FC = () => {
                       onChange={evt => setBluetooth(evt.target.value)}
                     />
                   ) : null}
-                </ListItem>
+                </li>
               ))}
             </List>
           </Fieldset>))}
-        <button type="submit">Показать</button>
+        <Button type="submit" width="200px" highlighted>Показать</Button>
       </Form>
     </div>
   )

@@ -118,52 +118,52 @@ export const filterList:
   },
   {
     id: 2,
-    name: 'color',
-    type: 'checkbox',
-    display: 'Цвет',
+    name: "color",
+    type: "checkbox",
+    display: "Цвет",
     options: [
       {
         id: 1,
-        value: 'black',
-        display: 'Черный',
+        value: "black",
+        display: "Черный",
       },
       {
         id: 2,
-        value: 'white',
-        display: 'Белый',
+        value: "white",
+        display: "Белый",
       },
       {
         id: 3,
-        value: 'blue',
-        display: 'Синий',
+        value: "blue",
+        display: "Синий",
       },
       {
         id: 4,
-        value: 'red',
-        display: 'Красный',
+        value: "red",
+        display: "Красный",
       },
       {
         id: 5,
-        value: 'pink',
-        display: 'Розовый',
+        value: "pink",
+        display: "Розовый",
       },
     ]
   },
   {
     id: 3,
-    name: 'bluetooth',
-    type: 'radio',
-    display: 'Bluetooth',
+    name: "bluetooth",
+    type: "radio",
+    display: "Bluetooth",
     options: [
       {
         id: 1,
-        value: 'yes',
-        display: 'Есть',
+        value: "yes",
+        display: "Есть",
       },
       {
         id: 2,
-        value: 'no',
-        display: 'Нет',
+        value: "no",
+        display: "Нет",
       }
     ]
   }

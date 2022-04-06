@@ -12,7 +12,7 @@ const ProductCard: React.FC<{ product: TProduct }> = ({ product }) => {
         <span className="visually-hidden">Новый товар</span>
       </New>
       <Price>{product.price} ₽</Price>
-      <StyledButton highlighted light onClick={() => {}}>
+      <StyledButton highlighted onClick={() => {}}>
         Купить
       </StyledButton>
     </StyledCard>
